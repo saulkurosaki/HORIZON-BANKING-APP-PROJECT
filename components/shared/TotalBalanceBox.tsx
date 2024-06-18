@@ -1,4 +1,5 @@
 import AnimatedCounter from "./AnimatedCounter";
+import DoughnutChart from "./DoughnutChart";
 
 const TotalBalanceBox = ({
   accounts = [],
@@ -7,7 +8,9 @@ const TotalBalanceBox = ({
 }: TotalBalanceBoxProps) => {
   return (
     <section className="total-balance">
-      <div className="total-balance-chart">{/* DoughnutChart */}</div>
+      <div className="total-balance-chart">
+        <DoughnutChart />
+      </div>
 
       <div className="flex flex-col gap-6">
         <h2 className="header-2">Bank Accounts: {totalBanks}</h2>
