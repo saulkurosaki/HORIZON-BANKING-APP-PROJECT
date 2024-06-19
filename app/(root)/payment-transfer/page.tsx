@@ -1,5 +1,5 @@
-const PaymentTransfer = () => {
-  return <div>PaymentTransfer</div>;
+const Transfer = () => {
+  return <div>Transfer</div>;
 };
 
-export default PaymentTransfer;
+export default Transfer;
