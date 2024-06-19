@@ -40,7 +40,17 @@ const BankCard = ({
             height={32}
           />
         </div>
+
+        <Image
+          src="/icons/lines.png"
+          alt="lines"
+          width={316}
+          height={190}
+          className="absolute top-0 left-0"
+        />
       </Link>
+
+      {/* COPY CARD NUMBERS */}
     </div>
   );
 };
