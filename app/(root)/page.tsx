@@ -1,4 +1,5 @@
 import HeaderBox from "@/components/shared/HeaderBox";
+import RightSidebar from "@/components/shared/RightSidebar";
 import TotalBalanceBox from "@/components/shared/TotalBalanceBox";
 
 const Home = () => {
@@ -21,7 +22,10 @@ const Home = () => {
             totalCurrentBalance={1250.35}
           />
         </header>
+        RECENT TRANSACTIONS
       </div>
+
+      <RightSidebar />
     </section>
   );
 };
