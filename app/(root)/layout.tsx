@@ -17,7 +17,7 @@ export default function RootLayout({
         <div className="root-layout">
           <Image
             src="/icons/logo.svg"
-            alt="menu icon"
+            alt="logo"
             width={30}
             height={30}
             className=""
@@ -26,9 +26,8 @@ export default function RootLayout({
             <MobileNav user={loggedIn} />
           </div>
         </div>
+        {children}
       </div>
-
-      {children}
     </main>
   );
 }
