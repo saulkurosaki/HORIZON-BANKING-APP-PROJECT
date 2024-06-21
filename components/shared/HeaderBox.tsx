@@ -1,8 +1,8 @@
 const HeaderBox = ({
   type = "title",
   title,
-  user,
   subtext,
+  user,
 }: HeaderBoxProps) => {
   return (
     <div className="header-box">

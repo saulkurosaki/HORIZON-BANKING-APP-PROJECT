@@ -14,7 +14,7 @@ const Home = async () => {
             type="greeting"
             title="Welcome"
             user={loggedIn?.name || "Guest"}
-            subtext="Access and manage your account and transactions efficiently"
+            subtext="Access and manage your account and transactions efficiently."
           />
 
           <TotalBalanceBox
