@@ -17,27 +17,27 @@ const getEnvironment = (): "production" | "sandbox" => {
   }
 };
 
-// const dwollaClient = new Client({
-//   environment: getEnvironment(),
-//   key: process.env.DWOLLA_KEY as string,
-//   secret: process.env.DWOLLA_SECRET as string,
-// });
+const dwollaClient = new Client({
+  environment: getEnvironment(),
+  key: process.env.DWOLLA_KEY as string,
+  secret: process.env.DWOLLA_SECRET as string,
+});
 
-// // Create a Dwolla Funding Source using a Plaid Processor Token
-// export const createFundingSource = async (
-//   options: CreateFundingSourceOptions
-// ) => {
-//   try {
-//     return await dwollaClient
-//       .post(`customers/${options.customerId}/funding-sources`, {
-//         name: options.fundingSourceName,
-//         plaidToken: options.plaidToken,
-//       })
-//       .then((res) => res.headers.get("location"));
-//   } catch (err) {
-//     console.error("Creating a Funding Source Failed: ", err);
-//   }
-// };
+// Create a Dwolla Funding Source using a Plaid Processor Token
+export const createFundingSource = async (
+  options: CreateFundingSourceOptions
+) => {
+  try {
+    return await dwollaClient
+      .post(`customers/${options.customerId}/funding-sources`, {
+        name: options.fundingSourceName,
+        plaidToken: options.plaidToken,
+      })
+      .then((res) => res.headers.get("location"));
+  } catch (err) {
+    console.error("Creating a Funding Source Failed: ", err);
+  }
+};
 
 // export const createOnDemandAuthorization = async () => {
 //   try {
