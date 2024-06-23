@@ -12,6 +12,7 @@ import {
 } from "plaid";
 import { plaidClient } from "../plaid";
 import { revalidatePath } from "next/cache";
+import { addFundingSource } from "./dwolla.actions";
 
 export const signIn = async ({ email, password }: signInProps) => {
   try {
@@ -98,6 +99,20 @@ export const createLinkToken = async (user: User) => {
   }
 };
 
+export const createBankAccount = async ({
+  userId,
+  bankId,
+  accountId,
+  accessToken,
+  fundingSourceUrl,
+  shareableId,
+}: createBankAccountProps) => {
+  try {
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 export const exchangePublicToken = async ({
   publicToken,
   user,
@@ -147,7 +162,7 @@ export const exchangePublicToken = async ({
       accountId: accountData.account_id,
       accessToken,
       fundingSourceUrl,
-      sharableId: encryptId(accountData.account_id),
+      shareableId: encryptId(accountData.account_id),
     });
 
     // Revalidate the path to reflect the changes
