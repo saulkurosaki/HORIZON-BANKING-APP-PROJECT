@@ -1,4 +1,5 @@
 import HeaderBox from "@/components/shared/HeaderBox";
+import RecentTransactions from "@/components/shared/RecentTransactions";
 import RightSidebar from "@/components/shared/RightSidebar";
 import TotalBalanceBox from "@/components/shared/TotalBalanceBox";
 import { getAccount, getAccounts } from "@/lib/actions/bank.actions";
@@ -14,11 +15,6 @@ const Home = async ({ searchParams: { id, page } }: SearchParamProps) => {
   const appwriteItemId = (id as string) || accountsData[0]?.appwriteItemId;
 
   const account = await getAccount({ appwriteItemId });
-
-  console.log({
-    accountsData,
-    account,
-  });
 
   return (
     <section className="home">
@@ -37,7 +33,8 @@ const Home = async ({ searchParams: { id, page } }: SearchParamProps) => {
             totalCurrentBalance={accounts?.totalCurrentBalance}
           />
         </header>
-        RECENT TRANSACTIONS
+
+        <RecentTransactions />
       </div>
 
       <RightSidebar
