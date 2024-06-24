@@ -14,6 +14,12 @@ import { plaidClient } from "../plaid";
 import { revalidatePath } from "next/cache";
 import { addFundingSource } from "./dwolla.actions";
 
+const {
+  APPWRITE_DATABASE_ID: DATABASE_ID,
+  APPWRITE_USER_COLLECTION_ID: USER_COLLECTION_ID,
+  APPWRITE_BANK_COLLECTION_ID: BANK_COLLECTION_ID,
+} = process.env;
+
 export const signIn = async ({ email, password }: signInProps) => {
   try {
     const { account } = await createAdminClient();
@@ -100,16 +106,34 @@ export const createLinkToken = async (user: User) => {
 };
 
 export const createBankAccount = async ({
-  userId,
-  bankId,
-  accountId,
   accessToken,
+  userId,
+  accountId,
+  bankId,
   fundingSourceUrl,
   shareableId,
 }: createBankAccountProps) => {
   try {
+    const { database } = await createAdminClient();
+
+    const bankAccount = await database.createDocument(
+      DATABASE_ID!,
+      BANK_COLLECTION_ID!,
+      ID.unique(),
+      {
+        accessToken,
+        userId,
+        accountId,
+        bankId,
+        fundingSourceUrl,
+        shareableId,
+      }
+    );
+
+    return parseStringify(bankAccount);
   } catch (error) {
-    console.log(error);
+    console.error("Error", error);
+    return null;
   }
 };
 
