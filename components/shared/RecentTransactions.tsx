@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import BankTabItem from "./BankTabItem";
 
 const RecentTransactions = ({
   accounts,
@@ -20,15 +21,14 @@ const RecentTransactions = ({
         </Link>
       </header>
 
-      <Tabs defaultValue="account" className="w-[400px]">
-        <TabsList>
-          <TabsTrigger value="account">Account</TabsTrigger>
-          <TabsTrigger value="password">Password</TabsTrigger>
+      <Tabs defaultValue={appwriteItemId} className="w-full">
+        <TabsList className="recent-transactions-tablist">
+          {accounts.map((account: Account) => (
+            <TabsTrigger key={account.id} value={account.appwriteItemId}>
+              <BankTabItem />
+            </TabsTrigger>
+          ))}
         </TabsList>
-        <TabsContent value="account">
-          Make changes to your account here.
-        </TabsContent>
-        <TabsContent value="password">Change your password here.</TabsContent>
       </Tabs>
     </section>
   );
