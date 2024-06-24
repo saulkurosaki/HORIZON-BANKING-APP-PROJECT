@@ -129,22 +129,22 @@ export const getAccount = async ({ appwriteItemId }: getAccountProps) => {
 };
 
 // Get bank info
-// export const getInstitution = async ({
-//   institutionId,
-// }: getInstitutionProps) => {
-//   try {
-//     const institutionResponse = await plaidClient.institutionsGetById({
-//       institution_id: institutionId,
-//       country_codes: ["US"] as CountryCode[],
-//     });
+export const getInstitution = async ({
+  institutionId,
+}: getInstitutionProps) => {
+  try {
+    const institutionResponse = await plaidClient.institutionsGetById({
+      institution_id: institutionId,
+      country_codes: ["US"] as CountryCode[],
+    });
 
-//     const intitution = institutionResponse.data.institution;
+    const intitution = institutionResponse.data.institution;
 
-//     return parseStringify(intitution);
-//   } catch (error) {
-//     console.error("An error occurred while getting the accounts:", error);
-//   }
-// };
+    return parseStringify(intitution);
+  } catch (error) {
+    console.error("An error occurred while getting the accounts:", error);
+  }
+};
 
 // Get transactions
 // export const getTransactions = async ({
