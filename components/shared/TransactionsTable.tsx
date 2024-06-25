@@ -45,6 +45,8 @@ const TransactionsTable = ({ transactions }: TransactionTableProps) => {
               <TableCell>
                 {isDebit ? `-${amount}` : isCredit ? amount : amount}
               </TableCell>
+
+              <TableCell>{status}</TableCell>
             </TableRow>
           );
         })}
