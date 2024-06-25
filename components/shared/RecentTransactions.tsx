@@ -41,7 +41,11 @@ const RecentTransactions = ({
             key={account.id}
             className="space-y-4"
           >
-            <BankInfo />
+            <BankInfo
+              account={account}
+              appwriteItemId={appwriteItemId}
+              type="full"
+            />
           </TabsContent>
         ))}
       </Tabs>
