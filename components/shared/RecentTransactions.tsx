@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import BankTabItem from "./BankTabItem";
+import BankInfo from "./BankInfo";
 
 const RecentTransactions = ({
   accounts,
@@ -39,7 +40,9 @@ const RecentTransactions = ({
             value={account.appwriteItemId}
             key={account.id}
             className="space-y-4"
-          ></TabsContent>
+          >
+            <BankInfo />
+          </TabsContent>
         ))}
       </Tabs>
     </section>
