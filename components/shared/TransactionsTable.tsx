@@ -41,6 +41,10 @@ const TransactionsTable = ({ transactions }: TransactionTableProps) => {
                   <h1>{removeSpecialCharacters(transaction.name)}</h1>
                 </div>
               </TableCell>
+
+              <TableCell>
+                {isDebit ? `-${amount}` : isCredit ? amount : amount}
+              </TableCell>
             </TableRow>
           );
         })}
