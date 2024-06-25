@@ -7,8 +7,13 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import {
+  formatAmount,
+  getTransactionStatus,
+  removeSpecialCharacters,
+} from "@/lib/utils";
 
-const TransactionsTable = () => {
+const TransactionsTable = ({ transactions }: TransactionTableProps) => {
   return (
     <Table>
       <TableHeader className="bg-[#f9fafb]">
@@ -21,14 +26,25 @@ const TransactionsTable = () => {
           <TableHead className="px-2 max-md:hidden">Category</TableHead>
         </TableRow>
       </TableHeader>
-      {/* <TableBody>
-        <TableRow>
-          <TableCell className="font-medium">INV001</TableCell>
-          <TableCell>Paid</TableCell>
-          <TableCell>Credit Card</TableCell>
-          <TableCell className="text-right">$250.00</TableCell>
-        </TableRow>
-      </TableBody> */}
+      <TableBody>
+        {transactions.map((transaction: Transaction) => {
+          const status = getTransactionStatus(new Date(transaction.date));
+          const amount = formatAmount(transaction.amount);
+
+          const isDebit = transaction.type === "debit";
+          const isCredit = transaction.type === "credit";
+
+          return (
+            <TableRow key={transaction.id}>
+              <TableCell>
+                <div>
+                  <h1>{removeSpecialCharacters(transaction.name)}</h1>
+                </div>
+              </TableCell>
+            </TableRow>
+          );
+        })}
+      </TableBody>
     </Table>
   );
 };
