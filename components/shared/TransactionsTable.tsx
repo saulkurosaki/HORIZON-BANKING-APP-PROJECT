@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/table";
 import {
   formatAmount,
+  formatDateTime,
   getTransactionStatus,
   removeSpecialCharacters,
 } from "@/lib/utils";
@@ -47,6 +48,10 @@ const TransactionsTable = ({ transactions }: TransactionTableProps) => {
               </TableCell>
 
               <TableCell>{status}</TableCell>
+
+              <TableCell>
+                {formatDateTime(new Date(transaction.date)).dateTime}
+              </TableCell>
             </TableRow>
           );
         })}
