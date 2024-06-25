@@ -54,6 +54,8 @@ const TransactionsTable = ({ transactions }: TransactionTableProps) => {
               </TableCell>
 
               <TableCell>{transaction.paymentChannel}</TableCell>
+
+              <TableCell>{transaction.category}</TableCell>
             </TableRow>
           );
         })}
