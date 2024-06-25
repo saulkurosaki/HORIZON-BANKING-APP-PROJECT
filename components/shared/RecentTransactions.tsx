@@ -48,7 +48,7 @@ const RecentTransactions = ({
               type="full"
             />
 
-            <TransactionsTable />
+            <TransactionsTable transactions={transactions} />
           </TabsContent>
         ))}
       </Tabs>
