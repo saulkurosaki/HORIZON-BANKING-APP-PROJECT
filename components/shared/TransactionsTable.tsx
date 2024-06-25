@@ -52,6 +52,8 @@ const TransactionsTable = ({ transactions }: TransactionTableProps) => {
               <TableCell>
                 {formatDateTime(new Date(transaction.date)).dateTime}
               </TableCell>
+
+              <TableCell>{transaction.paymentChannel}</TableCell>
             </TableRow>
           );
         })}
