@@ -9,7 +9,6 @@ const BankCard = ({
   userName,
   showBalance = true,
 }: CreditCardProps) => {
-  console.log(account);
   return (
     <div className="flex flex-col">
       <Link
@@ -55,7 +54,7 @@ const BankCard = ({
         />
       </Link>
 
-      {showBalance && <Copy title={account?.shareableId} />}
+      {showBalance && <Copy title={account?.sharableId} />}
     </div>
   );
 };
