@@ -1,37 +1,55 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## HORIZON BANKING APP PROJECT
 
-## Getting Started
+## <a name="tech-stack">⚙️ Tech Stack</a>
 
-First, run the development server:
+- Next.js
+- TypeScript
+- Appwrite
+- Plaid
+- Dwolla
+- React Hook Form
+- Zod
+- TailwindCSS
+- Chart.js
+- ShadCN
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## <a name="features">🔋 Features</a>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+👉 **Authentication**: An ultra-secure SSR authentication with proper validations and authorization
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+👉 **Connect Banks**: Integrates with Plaid for multiple bank account linking
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+👉 **Home Page**: Shows general overview of user account with total balance from all connected banks, recent transactions, money spent on different categories, etc
 
-## Learn More
+👉 **My Banks**: Check the complete list of all connected banks with respective balances, account details
 
-To learn more about Next.js, take a look at the following resources:
+👉 **Transaction History**: Includes pagination and filtering options for viewing transaction history of different banks
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+👉 **Real-time Updates**: Reflects changes across all relevant pages upon connecting new bank accounts.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+👉 **Funds Transfer**: Allows users to transfer funds using Dwolla to other accounts with required fields and recipient bank ID.
 
-## Deploy on Vercel
+👉 **Responsiveness**: Ensures the application adapts seamlessly to various screen sizes and devices, providing a consistent user experience across desktop, tablet, and mobile platforms.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+and many more, including code architecture and reusability.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# HORIZON BANKING APP PROJECT
+##
+
+![alt text](1-Xnip2024-06-26_20-00-59.jpg)
+![alt text](2-Xnip2024-06-26_20-03-01.jpg)
+![alt text](3-Xnip2024-06-26_20-04-06.jpg)
+![alt text](4-Xnip2024-06-26_20-04-29.jpg)
+![alt text](5-Xnip2024-06-26_20-04-49.jpg)
+![alt text](6-Xnip2024-06-26_20-05-15.jpg)
+![alt text](7-Xnip2024-06-26_20-06-24.jpg)
+![alt text](8-Xnip2024-06-26_20-06-44.jpg)
+![alt text](9-Xnip2024-06-26_20-07-00.jpg)
+![alt text](10-Xnip2024-06-26_20-07-31.jpg)
+![alt text](11-Xnip2024-06-26_20-09-01.jpg)
+![alt text](12-Xnip2024-06-26_20-10-00.jpg)
+![alt text](13-Xnip2024-06-26_20-12-15.jpg)
+![alt text](14-Xnip2024-06-26_20-12-21.jpg)
+![alt text](15-Xnip2024-06-26_20-12-30.jpg)
+![alt text](16-Xnip2024-06-26_20-13-50.jpg)
+![alt text](17-Xnip2024-06-26_20-14-20.jpg)
+![alt text](18-Xnip2024-06-26_20-15-18.jpg)
