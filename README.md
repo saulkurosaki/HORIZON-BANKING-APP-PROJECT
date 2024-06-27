@@ -1,4 +1,4 @@
-## HORIZON BANKING APP PROJECT
+# HORIZON BANKING APP PROJECT
 
 ## <a name="tech-stack">⚙️ Tech Stack</a>
 
